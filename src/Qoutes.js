@@ -28,11 +28,6 @@ function QouteBox() {
     console.log("hi");
   };
 
-  // const handleShake = () => {
-  //   const element = document.querySelector(".button");
-  //   element.style.animation = "shake 2s ease";
-  // };
-
   return (
     <div id="qoute-box">
       <div id="text">
@@ -57,17 +52,13 @@ function QouteBox() {
 
       <a
         id="tweet-qoute"
-        href={`https://twitter.com/intent/tweet?text=${qoute} \n <${author}>&related=AddToAny,micropat`}
+        href={`https://twitter.com/intent/tweet?text=${qoute}`}
+        //href={`https://twitter.com/intent/tweet?text=${qoute}&related=AddToAny,micropat`}
         target="blank"
       >
         <img src={twitterLogo} alt="twitter-logo" />
       </a>
-      <button
-        id="new-qoute"
-        className="button jump"
-        onClick={nextQoute}
-        // onMouseOver={handleJump}
-      >
+      <button id="new-qoute" className="button jump" onClick={nextQoute}>
         Next qoute
       </button>
     </div>

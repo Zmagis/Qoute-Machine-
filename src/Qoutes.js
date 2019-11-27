@@ -55,7 +55,11 @@ function QouteBox() {
         <p id="author">- {author}</p>
       </div>
 
-      <a id="tweet-qoute" href="https://twitter.com/" target="blank">
+      <a
+        id="tweet-qoute"
+        href={`https://twitter.com/intent/tweet?text=${qoute} \n <${author}>&related=AddToAny,micropat`}
+        target="blank"
+      >
         <img src={twitterLogo} alt="twitter-logo" />
       </a>
       <button

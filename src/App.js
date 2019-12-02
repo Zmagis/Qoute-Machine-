@@ -6,7 +6,7 @@ import QouteBox from "./Qoutes";
 function App() {
   return (
     <div className="App">
-      <h1>QOUTE MACHINE</h1>
+      <h1>QUOTE MACHINE</h1>
       <QouteBox />
     </div>
   );

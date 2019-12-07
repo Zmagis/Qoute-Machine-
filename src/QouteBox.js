@@ -1,28 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./QouteBox.css";
 import twitterLogo from "./blue.png";
 
-function QouteBox() {
-  const [qoute, setQoute] = useState("");
-  const [author, setAuthor] = useState("");
-
-  useEffect(() => {
-    getQoute();
-  }, []);
-
-  const getQoute = async () => {
-    const response = await fetch(
-      `https://gist.githubusercontent.com/natebass/b0a548425a73bdf8ea5c618149fe1fce/raw/f4231cd5961f026264bb6bb3a6c41671b044f1f4/quotes.json`
-    );
-    const data = await response.json();
-
-    let randomQoute;
-    randomQoute = data[Math.floor(Math.random() * data.length)];
-
-    setAuthor(randomQoute.author);
-    setQoute(randomQoute.quote);
-  };
-
+function QouteBox({ qoute, author, getQoute }) {
   return (
     <div id="qoute-box">
       <div id="text">

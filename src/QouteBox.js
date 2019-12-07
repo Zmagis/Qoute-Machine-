@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./Qoutes.css";
+import "./QouteBox.css";
 import twitterLogo from "./blue.png";
 
 function QouteBox() {
-  let randomQoute;
   const [qoute, setQoute] = useState("");
   const [author, setAuthor] = useState("");
 
@@ -17,15 +16,11 @@ function QouteBox() {
     );
     const data = await response.json();
 
+    let randomQoute;
     randomQoute = data[Math.floor(Math.random() * data.length)];
+
     setAuthor(randomQoute.author);
     setQoute(randomQoute.quote);
-  };
-
-  const nextQoute = e => {
-    e.preventDefault();
-    getQoute();
-    console.log("hi");
   };
 
   return (
@@ -57,7 +52,7 @@ function QouteBox() {
       >
         <img src={twitterLogo} alt="twitter-logo" />
       </a>
-      <button id="new-qoute" className="button jump" onClick={nextQoute}>
+      <button id="new-qoute" className="button jump" onClick={getQoute}>
         Next qoute
       </button>
     </div>

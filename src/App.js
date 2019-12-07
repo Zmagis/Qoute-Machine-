@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-import QouteBox from "./Qoutes";
+import QouteBox from "./QouteBox";
 
 function App() {
   return (

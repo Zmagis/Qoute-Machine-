@@ -28,6 +28,7 @@
   bottom: 20px;
   border-radius: 12px;
   border: 1px rgb(29, 165, 255) ridge;
+  outline: none;
   color: wheat;
   font-weight: bold;
   background-color: rgb(29, 165, 255);
